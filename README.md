@@ -14,7 +14,8 @@ the respective conversions. Call the functions passing only the value to be conv
 * **Allowed import** 'sys'       ( sys argument )
 * **Allowed builtins** 'open, float' (open file and float integer)
 * **Allowed User defined functions** ("FtoC" or "CtoF".)
+* **(2) functions one for "FtoC" and one for "CtoF"
 
 ## How to run
-* ** CLI py chl2052.py FtoC
-* ** CLI py chl2052.py CtoF
+* ** CLI py chl2054.py FtoC
+* ** CLI py chl2054.py CtoF

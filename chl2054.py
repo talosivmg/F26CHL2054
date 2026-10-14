@@ -5,23 +5,20 @@ with open ("challenge.data", "r") as rawFile:   #Opens and reads file.
     contents = rawFile.read().strip()           #Reads contents, strips characters, assigns to variable. 
     contentsValue = float(contents)             #Converts contents to decimal. 
 
-def modeCalculation(inputMode):                         #Defines a function with a parameter `input mode`. 
-    if inputMode == "FtoC":                             #If compares to a string. 
-        tempCalculation = ( contentsValue -32 ) * 5 / 9 #Temp calculation 
-    elif inputMode == "CtoF":                           #`else if` compares the string. 
-        tempCalculation = ( contentsValue * 9 / 5) +32  #Temp calculation 
-    print (tempCalculation)                             #Check print temp calculation. 
-    print (temperatureMode)                             #Check print temperature mode. 
-    print (contents)                                    #Check print contents. 
-    return tempCalculation                              #Return capture calculation. 
+def FtoC(contentsValue):                        #Function if parameter is FtoC. 
+    tempCalculation = ( contentsValue -32 ) * 5 / 9
+    return tempCalculation
+
+def CtoF(contentsValue):                        #Function if parameter is CtoF. 
+    tempCalculation = (contentsValue * 9 / 5 ) + 32
+    return tempCalculation
 
 
-result = modeCalculation(temperatureMode)               #Calls function, assigns to result 
+if temperatureMode == "FtoC":
+    result = FtoC(contentsValue)
+elif temperatureMode == "CtoF":
+    result = CtoF(contentsValue)
 
-
-print (f"mode: , {temperatureMode}")                     #Prints temperature mode. 
-print (f"file contents: , {contents}")                   #Prints contents. 
-print (f"function result: , {result}")                   #Prints results from function. 
 
 with open ("challenge.out", "w") as outputFile:
     outputFile.write(str(result))
@@ -38,7 +35,8 @@ assign argument 1 to challengeDataValue
 
 open challenge.data read
 
-define function mode FtoC or CtoF
+define function FtoC
+define function CtoF
 
 if mode
     is FtoC : then calculate
