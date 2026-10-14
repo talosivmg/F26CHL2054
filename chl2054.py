@@ -23,9 +23,8 @@ print (f"mode: , {temperatureMode}")                     #Prints temperature mod
 print (f"file contents: , {contents}")                   #Prints contents. 
 print (f"function result: , {result}")                   #Prints results from function. 
 
-
-
-
+with open ("challenge.out", "w") as outputFile:
+    outputFile.write(str(result))
 
 
 
